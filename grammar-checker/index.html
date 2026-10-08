@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 语法检查器</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📝 AI 英语语法检查与优化</h1>
+
+  <div class="legend">
+    <span class="legend-item"><span class="dot grammar"></span>语法错误</span>
+    <span class="legend-item"><span class="dot spelling"></span>拼写错误</span>
+    <span class="legend-item"><span class="dot usage"></span>用法不当</span>
+  </div>
+
+  <div class="app-container">
+    <div class="input-panel">
+      <div class="editor-wrapper">
+        <textarea id="sentenceInput" placeholder="请输入英文文本（支持长文本）&#10;&#10;例如：She don't likes coffee. He go to school everyday..."></textarea>
+        <div id="highlightedText" class="highlighted-text" style="display:none;"></div>
+      </div>
+      <div class="button-row">
+        <button id="checkBtn">🔍 检查语法</button>
+        <button id="optimizeBtn">✨ 优化表达</button>
+        <button id="editBtn" style="display:none;">✏️ 重新编辑</button>
+      </div>
+      <div id="stats" class="stats"></div>
+    </div>
+
+    <div class="result-panel" id="resultPanel">
+      <div class="empty-state">
+        <p>点击左侧按钮后，结果将显示在这里</p>
+        <p class="hint">检查后点击高亮色块查看详情；优化后查看高级版本</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
